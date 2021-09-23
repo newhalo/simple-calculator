@@ -1,3 +1,6 @@
+# Live Demo:
+[https://codesandbox.io/s/simple-calculator-hxr4f](https://codesandbox.io/s/simple-calculator-hxr4f)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
