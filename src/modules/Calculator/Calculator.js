@@ -23,7 +23,7 @@ const Calculator = () => {
     }, [])
 
     return (
-        <Wrapper className="calculator">
+        <Wrapper className="calculator" data-testid="calculator">
             <Result value={display} />
             <Keyboard calculateEngine={engine} clearable={clearable} onButtonClick={handleButtonClick} />
         </Wrapper>

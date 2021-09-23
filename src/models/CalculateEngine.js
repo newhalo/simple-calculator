@@ -315,7 +315,7 @@ class CalculateEngine {
     }
 
     containDecimalPoint(number) {
-        return MathUtils.isDecimal(number);
+        return number.includes(DOT_BUTTON_ENUM.value) || MathUtils.isDecimal(number);
     }
 }
 

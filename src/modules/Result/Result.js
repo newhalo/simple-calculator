@@ -15,10 +15,6 @@ const Result = ({ value }) => {
         }
     }
 
-    const updateDimensions = () => {
-
-    }
-
     const getFontSize = () => {
         return parseFloat(
             window
@@ -28,7 +24,7 @@ const Result = ({ value }) => {
     }
 
     const reduceFontSize = useCallback(() => {
-        if (
+        if (wrapperRef.current && textRef.current &&
             wrapperRef.current.clientWidth <=
             (textRef.current.clientWidth || textRef.current.offsetWidth) + 40
         ) {
@@ -42,16 +38,11 @@ const Result = ({ value }) => {
     }
 
     useEffect(() => {
-        resetFontSize();
-        reduceFontSize();
-    }, [value, reduceFontSize])
-
-    useEffect(() => {
-        window.addEventListener("resize", updateDimensions);
-        return () => {
-            window.removeEventListener("resize", updateDimensions);
+        if(!process.env.REACT_APP_TESTING){
+            resetFontSize();
+            reduceFontSize();
         }
-    }, [])
+    }, [value, reduceFontSize])
 
     return (
         <div ref={wrapperRef} id="display" className="outputScreen">
