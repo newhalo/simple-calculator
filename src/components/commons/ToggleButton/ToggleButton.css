@@ -1,0 +1,7 @@
+.btn-toggle {
+    background: rgb(220, 220, 220);
+}
+
+.btn-toggle:active {
+    background: #b2b1b2;
+}

@@ -1,0 +1,11 @@
+.btn-equal {
+    background : #f5923d;
+    color      : #fff;
+    font-family: Roboto;
+    font-weight: 600;
+
+}
+
+.btn-equal:active {
+    background: #b2b1b2;
+}

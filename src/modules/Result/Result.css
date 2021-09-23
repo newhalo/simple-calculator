@@ -1,0 +1,66 @@
+.outputScreen {
+	text-align   : right;
+	padding-right: 20px;
+	padding-left : 20px;
+	background   : #4c4c4cf2;
+	height       : 140px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.outputScreen .result {
+	color         : #f5f8fa;
+	font-size     : 5.2em;
+	font-weight   : 100;
+	letter-spacing: 2px;
+	font-family   : Roboto;
+	position      : relative;
+}
+
+.outputScreen .circles {
+	text-align   : left;
+	margin-bottom: 20px;
+}
+
+.outputScreen .circles .red {
+	background   : #fc5753;
+	padding      : 0px 11px 0px 11px;
+	border-radius: 20px;
+	position     : relative;
+	top          : 10px;
+	margin-right : 12px;
+	cursor       : pointer;
+}
+
+.outputScreen .circles .red:active {
+	background: #e93d3a;
+}
+
+.outputScreen .circles .yellow {
+	background   : #fcbc40;
+	padding      : 0px 11px 0px 11px;
+	border-radius: 20px;
+	position     : relative;
+	top          : 10px;
+	margin-right : 12px;
+	cursor       : pointer;
+}
+
+.outputScreen .circles .yellow:active {
+	background: #d39c2f;
+}
+
+.outputScreen .circles .green {
+	background   : #33c84a;
+	padding      : 0px 11px 0px 11px;
+	border-radius: 20px;
+	position     : relative;
+	top          : 10px;
+	margin-right : 12px;
+	cursor       : pointer;
+}
+
+.outputScreen .circles .green:active {
+	background: #2db641;
+}

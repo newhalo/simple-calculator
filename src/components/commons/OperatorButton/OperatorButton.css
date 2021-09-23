@@ -1,0 +1,15 @@
+.btn-operator {
+    background : #f5923d;
+    color      : #fff;
+    font-family: Roboto;
+    font-weight: 600;
+
+}
+
+.btn-operator:focus {
+    background: #b46c2d;
+}
+
+.btn-operator:active {
+    background: #b2b1b2;
+}

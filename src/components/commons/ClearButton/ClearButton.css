@@ -1,0 +1,7 @@
+.btn-clear {
+    background: rgb(220, 220, 220);
+}
+
+.btn-clear:active {
+    background: #b2b1b2;
+}

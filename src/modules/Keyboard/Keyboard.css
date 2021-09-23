@@ -1,0 +1,11 @@
+.keyboard {
+    overflow             : hidden;
+    display              : grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.keyboard .btn {}
+
+.keyboard .btn.span-2 {
+    grid-column: 1 / span 2;
+}
