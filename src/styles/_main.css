@@ -6,8 +6,9 @@
 body {
     margin         : 0;
     padding        : 0;
-    font-family    : 'Open Sans', sans-serif;
-    text-shadow    : rgba(0, 0, 0, .01) 0 0 1px;
-    background     : url('https://i.imgur.com/jwgjess.jpeg');
+    font-family    : var(--font-family);
+    text-shadow    : var(--text-shadow-base);
+    background     : var(--bg-body);
     background-size: cover;
+    font-size      : var(--font-size-base);
 }

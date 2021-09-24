@@ -1,11 +1,11 @@
 .btn-equal {
-    background : #f5923d;
-    color      : #fff;
-    font-family: Roboto;
-    font-weight: 600;
+    background : var(--primary-color);
+    color      : var(--text-color-light);
+    font-family: var(--font-family-secondary);
+    font-weight: var(--font-weight-semi-bold);
 
 }
 
 .btn-equal:active {
-    background: #b2b1b2;
+    background: var(--active-color);
 }

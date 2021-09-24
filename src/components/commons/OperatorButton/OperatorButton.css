@@ -1,15 +1,15 @@
 .btn-operator {
-    background : #f5923d;
-    color      : #fff;
-    font-family: Roboto;
+    background : var(--primary-color);
+    color      : var(--text-color-light);
+    font-family: var(--font-family-secondary);
     font-weight: 600;
 
 }
 
 .btn-operator:focus {
-    background: #b46c2d;
+    filter: brightness(0.8);
 }
 
 .btn-operator:active {
-    background: #b2b1b2;
+    background: var(--active-color);
 }
