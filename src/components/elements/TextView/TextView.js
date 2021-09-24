@@ -8,11 +8,11 @@ const TextView = ({
     value,
     className,
     ...restProps
-}) => {
+}, ref) => {
 
     return (
-        <div {...restProps} className={clsx('txt', className)}>{value}</div>
+        <span {...restProps} ref={ref} className={clsx('txt', className)}>{value}</span>
     )
 }
 
-export default TextView
+export default React.forwardRef(TextView)
