@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef } from 'react'
+import { TextView, Wrapper } from '../../components/elements';
 
 import './Result.css'
 
@@ -46,18 +47,20 @@ const Result = ({ value }) => {
     }, [value, reduceFontSize])
 
     return (
-        <div ref={wrapperRef} id="display" className="outputScreen">
+        <Wrapper ref={wrapperRef} id="display" className="outputScreen">
             <div className="circles">
                 <span className="red"></span>
                 <span className="yellow"></span>
                 <span className="green"></span>
             </div>
             <div className="result">
-                <span ref={textRef} style={{ fontSize: fontSizeBase }}>
-                    {isNaN(value) ? 'Error' : value === 'Infinity' ? 'Error' : handleFormat(value)}
-                </span>
+                <TextView
+                    ref={textRef}
+                    style={{ fontSize: fontSizeBase }}
+                    value={isNaN(value) ? 'Error' : value === 'Infinity' ? 'Error' : handleFormat(value)}
+                />
             </div>
-        </div>
+        </Wrapper>
     )
 }
 

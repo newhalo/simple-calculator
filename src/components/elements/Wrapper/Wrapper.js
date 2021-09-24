@@ -8,11 +8,11 @@ const Wrapper = ({
     children,
     className,
     ...restProps
-}) => {
+}, ref) => {
 
     return (
-        <div {...restProps} className={clsx('wrapper', className)}>{children}</div>
+        <div {...restProps} ref={ref} className={clsx('wrapper', className)}>{children}</div>
     )
 }
 
-export default Wrapper
+export default React.forwardRef(Wrapper)
