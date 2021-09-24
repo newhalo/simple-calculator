@@ -2,6 +2,8 @@ import React, { useCallback, useEffect, useRef } from 'react'
 
 import './Result.css'
 
+const fontSizeBase = 83;
+
 const Result = ({ value }) => {
 
     const wrapperRef = useRef()
@@ -23,25 +25,24 @@ const Result = ({ value }) => {
         );
     }
 
-    const reduceFontSize = useCallback(() => {
-        if (wrapperRef.current && textRef.current &&
+    const reduceFontSize = useCallback((fontSize = fontSizeBase) => {
+        if (fontSize > 0 && wrapperRef.current && textRef.current &&
             wrapperRef.current.clientWidth <=
             (textRef.current.clientWidth || textRef.current.offsetWidth) + 40
         ) {
-            textRef.current.style.fontSize = (getFontSize() - 10) + 'px';
-            return reduceFontSize();
+            fontSize = (getFontSize() - 10)
+            textRef.current.style.fontSize = fontSize + 'px';
+            return reduceFontSize(fontSize);
         }
     }, [wrapperRef, textRef])
 
     const resetFontSize = () => {
-        textRef.current.style.fontSize = 83 + 'px';
+        textRef.current.style.fontSize = fontSizeBase + 'px';
     }
 
     useEffect(() => {
-        if(!process.env.REACT_APP_TESTING){
-            resetFontSize();
-            reduceFontSize();
-        }
+        resetFontSize();
+        reduceFontSize();
     }, [value, reduceFontSize])
 
     return (
@@ -52,7 +53,7 @@ const Result = ({ value }) => {
                 <span className="green"></span>
             </div>
             <div className="result">
-                <span ref={textRef} style={{ fontSize: 83 }}>
+                <span ref={textRef} style={{ fontSize: fontSizeBase }}>
                     {isNaN(value) ? 'Error' : value === 'Infinity' ? 'Error' : handleFormat(value)}
                 </span>
             </div>
